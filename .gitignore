@@ -1,0 +1,24 @@
+# dependencies
+node_modules/
+.pnpm-store/
+
+# build outputs
+.next/
+out/
+dist/
+storybook-static/
+*.tsbuildinfo
+
+# turborepo
+.turbo/
+
+# env
+.env
+.env*.local
+
+# testing
+coverage/
+
+# misc
+.DS_Store
+*.log

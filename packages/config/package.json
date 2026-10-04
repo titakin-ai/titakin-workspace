@@ -1,0 +1,31 @@
+{
+  "name": "@titakin/config",
+  "version": "0.0.0",
+  "private": true,
+  "type": "module",
+  "exports": {
+    "./eslint/base": "./eslint/base.mjs",
+    "./eslint/react-library": "./eslint/react-library.mjs",
+    "./eslint/next": "./eslint/next.mjs",
+    "./tailwind/preset": "./tailwind/preset.ts",
+    "./tsconfig/*": "./tsconfig/*"
+  },
+  "dependencies": {
+    "@eslint/js": "^9.25.0",
+    "@next/eslint-plugin-next": "^15.3.0",
+    "eslint-plugin-react": "^7.37.5",
+    "eslint-plugin-react-hooks": "^5.2.0",
+    "globals": "^16.0.0",
+    "typescript-eslint": "^8.30.0"
+  },
+  "peerDependencies": {
+    "eslint": "^9.0.0",
+    "tailwindcss": "^3.4.0",
+    "typescript": "^5.0.0"
+  },
+  "devDependencies": {
+    "eslint": "^9.25.0",
+    "tailwindcss": "^3.4.17",
+    "typescript": "^5.8.3"
+  }
+}

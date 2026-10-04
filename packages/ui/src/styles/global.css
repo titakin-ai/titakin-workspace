@@ -1,0 +1,105 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/*
+ * Titakin design tokens.
+ *
+ * Values are raw HSL channels ("H S% L%") so Tailwind can compose them with
+ * opacity modifiers: hsl(var(--primary) / 0.5).
+ *
+ * Theming layers (later layers win):
+ *   1. :root                  → default Titakin brand, light mode
+ *   2. .dark                  → default Titakin brand, dark mode
+ *   3. [data-tenant="<slug>"] → per-tenant brand overrides (white-label), e.g.
+ *
+ *        [data-tenant="acme"]       { --primary: 160 84% 30%; --ring: 160 84% 30%; }
+ *        .dark [data-tenant="acme"],
+ *        [data-tenant="acme"].dark  { --primary: 160 70% 45%; }
+ *
+ *      Tenants should only override brand tokens (primary/accent/ring/radius).
+ *      Severity tokens are a product-wide semantic contract and must stay stable.
+ */
+@layer base {
+  :root {
+    --background: 0 0% 100%;
+    --foreground: 222 47% 11%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 222 47% 11%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 222 47% 11%;
+
+    --primary: 243 75% 59%;
+    --primary-foreground: 0 0% 100%;
+    --secondary: 220 14% 96%;
+    --secondary-foreground: 222 47% 11%;
+    --muted: 220 14% 96%;
+    --muted-foreground: 220 9% 40%;
+    --accent: 243 100% 97%;
+    --accent-foreground: 243 75% 40%;
+    --destructive: 0 72% 45%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 220 13% 91%;
+    --input: 220 13% 91%;
+    --ring: 243 75% 59%;
+    --radius: 0.5rem;
+
+    /* Severity scale (CVSS v3/v4 aligned). Foregrounds meet WCAG AA on their fill. */
+    --severity-critical: 345 83% 41%;
+    --severity-critical-foreground: 0 0% 100%;
+    --severity-high: 17 88% 40%;
+    --severity-high-foreground: 0 0% 100%;
+    --severity-medium: 43 96% 56%;
+    --severity-medium-foreground: 21 92% 14%;
+    --severity-low: 201 96% 32%;
+    --severity-low-foreground: 0 0% 100%;
+    --severity-info: 220 14% 92%;
+    --severity-info-foreground: 220 9% 30%;
+  }
+
+  .dark {
+    --background: 224 47% 6%;
+    --foreground: 213 31% 94%;
+
+    --card: 224 40% 9%;
+    --card-foreground: 213 31% 94%;
+    --popover: 224 40% 9%;
+    --popover-foreground: 213 31% 94%;
+
+    --primary: 243 90% 70%;
+    --primary-foreground: 243 50% 12%;
+    --secondary: 223 30% 16%;
+    --secondary-foreground: 213 31% 94%;
+    --muted: 223 30% 14%;
+    --muted-foreground: 218 15% 65%;
+    --accent: 243 40% 20%;
+    --accent-foreground: 243 90% 85%;
+    --destructive: 0 72% 51%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 223 30% 18%;
+    --input: 223 30% 18%;
+    --ring: 243 90% 70%;
+
+    --severity-critical: 347 77% 50%;
+    --severity-critical-foreground: 0 0% 100%;
+    --severity-high: 17 88% 40%;
+    --severity-high-foreground: 0 0% 100%;
+    --severity-medium: 43 96% 56%;
+    --severity-medium-foreground: 21 92% 14%;
+    --severity-low: 199 89% 48%;
+    --severity-low-foreground: 204 80% 16%;
+    --severity-info: 223 30% 20%;
+    --severity-info-foreground: 218 15% 75%;
+  }
+
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground antialiased;
+  }
+}

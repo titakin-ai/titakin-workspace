@@ -1,0 +1,24 @@
+{
+  "name": "titakin",
+  "version": "0.0.0",
+  "private": true,
+  "description": "Titakin — B2B cybersecurity SaaS monorepo",
+  "packageManager": "pnpm@10.17.1",
+  "engines": {
+    "node": ">=20.9.0",
+    "pnpm": ">=10.0.0"
+  },
+  "scripts": {
+    "build": "turbo run build",
+    "dev": "turbo run dev",
+    "lint": "turbo run lint",
+    "typecheck": "turbo run typecheck",
+    "storybook": "turbo run dev --filter=@titakin/ui",
+    "build-storybook": "turbo run build-storybook",
+    "clean": "turbo run clean && rm -rf node_modules .turbo"
+  },
+  "devDependencies": {
+    "turbo": "^2.5.0",
+    "typescript": "^5.8.3"
+  }
+}
