@@ -11,11 +11,12 @@ interface TenantSummary {
 }
 
 const severityLabel: Readonly<Record<Severity, string>> = {
+  default: "Primario",
   critical: "Crítico",
   high: "Alto",
   medium: "Medio",
   low: "Bajo",
-  info: "Info",
+  outline: "Info",
 };
 
 const tenants: readonly TenantSummary[] = [
