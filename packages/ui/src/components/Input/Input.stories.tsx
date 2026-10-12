@@ -2,7 +2,7 @@ import type { ReactElement } from "react";
 import type { Meta, StoryObj } from "@storybook/react-vite";
 import { Mail, Lock, EyeOff, AlertCircle } from "lucide-react";
 import { Input, PasswordInput } from "./Input";
-import { Button } from "./Button";
+import { Button } from "../Button";
 
 const meta = {
   title: "Components/Input",

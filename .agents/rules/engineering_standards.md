@@ -20,6 +20,7 @@ description: Architectural and code quality guidelines enforcing SOLID principle
   - **Radix `asChild` Pattern:** For polymorphic components, ALWAYS implement the `asChild` boolean prop using `@radix-ui/react-slot` (`Slot`). This allows consumers to change the underlying HTML element while maintaining the component's styles and behavior, perfectly adhering to the Open/Closed Principle.
 
 ## 3. Inflexible Component Structure
+- **Folder per Component (Colocation):** Each component in `packages/ui/src/components/` MUST live in its own dedicated directory containing its implementation, Storybook stories, and a barrel `index.ts` (e.g., `src/components/Badge/{Badge.tsx, Badge.stories.tsx, index.ts}`).
 - **Refs:** It is MANDATORY to use `React.forwardRef` in all exposed DOM components.
 - **Exports:** Use EXCLUSIVELY named exports. `export default` is strictly prohibited (unless explicitly required by a framework convention like Next.js pages/layouts or Storybook files).
 - **Variants:** Manage component variants strictly using `class-variance-authority` (`cva`).

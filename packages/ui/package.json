@@ -8,7 +8,7 @@
   ],
   "exports": {
     ".": "./src/index.ts",
-    "./components/*": "./src/components/*.tsx",
+    "./components/*": "./src/components/*/index.ts",
     "./lib/utils": "./src/lib/utils.ts",
     "./styles/global.css": "./src/styles/global.css",
     "./tailwind.config": "./tailwind.config.ts"
