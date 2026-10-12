@@ -37,6 +37,18 @@ const meta = {
       description: "Texto informativo de soporte.",
     },
   },
+  decorators: [
+    (Story, context): ReactElement => {
+      if (context.parameters?.unconstrainedWidth) {
+        return <Story />;
+      }
+      return (
+        <div className="w-full max-w-sm">
+          <Story />
+        </div>
+      );
+    },
+  ],
 } satisfies Meta<typeof Input>;
 
 export default meta;
@@ -77,13 +89,11 @@ export const Disabled: Story = {
 export const Password: Story = {
   name: "Password con Toggle",
   render: (): ReactElement => (
-    <div className="w-80">
-      <PasswordInput
-        leftIcon={<Lock className="size-4" />}
-        placeholder="Ingresa tu contraseña"
-        defaultValue="MiPassword123"
-      />
-    </div>
+    <PasswordInput
+      leftIcon={<Lock className="size-4" />}
+      placeholder="Ingresa tu contraseña"
+      defaultValue="MiPassword123"
+    />
   ),
 };
 
@@ -93,7 +103,7 @@ export const Password: Story = {
  */
 export const FigmaEmailSpecification: Story = {
   name: "Figma: 3. Input - Correo electrónico (Especificación Exacta)",
-  parameters: { controls: { disable: true } },
+  parameters: { controls: { disable: true }, unconstrainedWidth: true },
   render: (): ReactElement => (
     <div className="w-full max-w-5xl rounded-xl border border-[#243149] bg-[#0F2748] p-8 text-white shadow-xl">
       <div className="mb-6">
@@ -181,7 +191,7 @@ export const FigmaEmailSpecification: Story = {
  */
 export const FigmaPasswordSpecification: Story = {
   name: "Figma: 4. Input - Contraseña (Especificación Exacta)",
-  parameters: { controls: { disable: true } },
+  parameters: { controls: { disable: true }, unconstrainedWidth: true },
   render: (): ReactElement => (
     <div className="w-full max-w-5xl rounded-xl border border-[#243149] bg-[#0F2748] p-8 text-white shadow-xl">
       <div className="mb-6">
@@ -275,7 +285,7 @@ export const FigmaPasswordSpecification: Story = {
  */
 export const AuthLoginFormExample: Story = {
   name: "Formulario de Login Completo",
-  parameters: { controls: { disable: true } },
+  parameters: { controls: { disable: true }, unconstrainedWidth: true },
   render: (): ReactElement => (
     <div className="w-full max-w-sm rounded-xl border border-[#243149] bg-[#0F2748] p-6 text-white shadow-2xl">
       <h3 className="text-lg font-semibold tracking-tight text-white">Portal de cliente</h3>
