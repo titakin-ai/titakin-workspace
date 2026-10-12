@@ -25,6 +25,7 @@ description: Architectural and code quality guidelines enforcing SOLID principle
 - **Exports:** Use EXCLUSIVELY named exports. `export default` is strictly prohibited (unless explicitly required by a framework convention like Next.js pages/layouts or Storybook files).
 - **Variants:** Manage component variants strictly using `class-variance-authority` (`cva`).
 - **Class Composition:** Dynamic class concatenation must exclusively go through a `cn` utility (combining `clsx` and `tailwind-merge`). Direct string interpolation for Tailwind classes is forbidden.
+- **Design Tokens (Zero Arbitrary Values):** NEVER use arbitrary hardcoded hex classes (such as `bg-[#2F80FF]`, `border-[#5AA7FF]`, `text-[#8D9AAF]`) in components. All colors, borders, rings, and surfaces must strictly consume the design system tokens defined in the Tailwind preset and CSS variables (`bg-brand-500`, `hover:border-brand-400`, `border-border`, `bg-surface`, `text-muted-foreground`, `ring-brand-300`, `bg-destructive`). All raw values and definitions must be cataloged in `packages/ui/src/tokens/index.ts`.
 - **Storybook & Docs Synchronization (MANDATORY):** 
   - EVERY UI component created or updated in `packages/ui` MUST be accompanied by its corresponding `.stories.tsx` file documenting all its variants, sizes, and states.
   - **Docs Section Up-to-Date:** The Storybook Docs view (`autodocs`) MUST be kept strictly in sync with the component's latest props, variants, and Figma specifications (`argTypes`, descriptions, default values, and real-world examples).

@@ -7,22 +7,22 @@ import { Loader2 } from "lucide-react";
 import { cn } from "../../lib/utils";
 
 export const buttonVariants = cva(
-  "inline-flex items-center justify-center whitespace-nowrap font-sans font-normal tracking-normal transition-all duration-150 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#8BC2FF] focus-visible:ring-offset-2 focus-visible:ring-offset-[#0F2748] disabled:pointer-events-none select-none cursor-pointer disabled:cursor-not-allowed",
+  "inline-flex items-center justify-center whitespace-nowrap font-sans font-normal tracking-normal transition-all duration-150 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand-300 focus-visible:ring-offset-2 focus-visible:ring-offset-background disabled:pointer-events-none select-none cursor-pointer disabled:cursor-not-allowed",
   {
     variants: {
       variant: {
         primary:
-          "bg-[#2F80FF] text-white hover:bg-[#5AA7FF] active:bg-[#1457C5] focus-visible:ring-[#8BC2FF] disabled:bg-[#243149] disabled:text-[#8D9AAF] disabled:opacity-100 shadow-sm shadow-blue-500/15",
+          "bg-brand-500 text-white hover:bg-brand-400 active:bg-brand-dark focus-visible:ring-brand-300 disabled:bg-border disabled:text-muted-foreground disabled:opacity-100 shadow-sm shadow-brand-500/15",
         secondary:
-          "border border-[#243149] bg-transparent text-[#F4F7FB] hover:border-[#5AA7FF] hover:text-white active:border-[#1A2942] active:bg-[#1A2942]/30 focus-visible:border-[#5AA7FF] focus-visible:ring-2 focus-visible:ring-[#8BC2FF] disabled:border-[#243149]/50 disabled:text-[#8D9AAF] disabled:opacity-100 shadow-none",
+          "border border-border bg-transparent text-foreground hover:border-brand-400 hover:text-white active:border-border active:bg-surface/50 focus-visible:border-brand-400 focus-visible:ring-2 focus-visible:ring-brand-300 disabled:border-border/50 disabled:text-muted-foreground disabled:opacity-100 shadow-none",
         outline:
-          "border border-[#2F80FF] text-[#8BC2FF] hover:bg-[#2F80FF]/15 hover:border-[#5AA7FF] active:bg-[#1457C5]/30 disabled:border-[#243149] disabled:text-[#8D9AAF] disabled:opacity-100",
+          "border border-brand-500 text-brand-300 hover:bg-brand-500/15 hover:border-brand-400 active:bg-brand-dark/30 disabled:border-border disabled:text-muted-foreground disabled:opacity-100",
         ghost:
-          "text-[#F4F7FB] hover:bg-[#243149] hover:text-white active:bg-[#1A2942] disabled:text-[#8D9AAF] disabled:opacity-100",
+          "text-foreground hover:bg-border hover:text-white active:bg-surface disabled:text-muted-foreground disabled:opacity-100",
         destructive:
-          "bg-[#FF5C6C] text-white hover:bg-[#ff7582] active:bg-[#e04555] focus-visible:ring-[#FF5C6C]/60 disabled:bg-[#243149] disabled:text-[#8D9AAF] disabled:opacity-100 shadow-sm shadow-red-500/15",
+          "bg-destructive text-destructive-foreground hover:bg-destructive/90 active:bg-destructive/80 focus-visible:ring-destructive/60 disabled:bg-border disabled:text-muted-foreground disabled:opacity-100 shadow-sm shadow-destructive/15",
         link:
-          "text-[#8BC2FF] hover:text-[#5AA7FF] underline-offset-4 hover:underline p-0 h-auto font-normal disabled:text-[#8D9AAF]",
+          "text-brand-300 hover:text-brand-400 underline-offset-4 hover:underline p-0 h-auto font-normal disabled:text-muted-foreground",
       },
       size: {
         default: "h-10 px-4 py-2 text-sm rounded-lg gap-2",
