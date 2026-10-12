@@ -24,7 +24,10 @@ description: Architectural and code quality guidelines enforcing SOLID principle
 - **Exports:** Use EXCLUSIVELY named exports. `export default` is strictly prohibited (unless explicitly required by a framework convention like Next.js pages/layouts or Storybook files).
 - **Variants:** Manage component variants strictly using `class-variance-authority` (`cva`).
 - **Class Composition:** Dynamic class concatenation must exclusively go through a `cn` utility (combining `clsx` and `tailwind-merge`). Direct string interpolation for Tailwind classes is forbidden.
-- **Storybook:** EVERY UI component created in `packages/ui` MUST be accompanied by its corresponding `.stories.tsx` file to document its variants, composition examples (e.g., icons, counters as children), and overridden `className` behaviors.
+- **Storybook & Docs Synchronization (MANDATORY):** 
+  - EVERY UI component created or updated in `packages/ui` MUST be accompanied by its corresponding `.stories.tsx` file documenting all its variants, sizes, and states.
+  - **Docs Section Up-to-Date:** The Storybook Docs view (`autodocs`) MUST be kept strictly in sync with the component's latest props, variants, and Figma specifications (`argTypes`, descriptions, default values, and real-world examples).
+  - **Docs Theme & Visual Integrity:** Ensure that the Docs tab correctly renders all component variants against the design tokens (Dark Theme `#0F2748`), with full text contrast and without any rogue wrapper borders, ensuring that Docs always mirrors the true, active state of the component library.
 
 ## 4. Next.js Compatibility
 - **"use client" Directive:** Any component in `packages/ui` that uses interactivity, state, or DOM APIs (including Radix UI primitives) MUST include the `"use client"` directive on the very first line. Stateless server components must omit it.

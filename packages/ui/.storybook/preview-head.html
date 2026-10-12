@@ -22,6 +22,108 @@
     padding: 2rem;
   }
 
+  /* --- Storybook Docs (#0F2748 Dark Theme) --- */
+  .sbdocs,
+  .sbdocs-wrapper,
+  .sbdocs-content {
+    background-color: #0F2748 !important;
+    color: #F4F7FB !important;
+  }
+
+  /* Contenedor exterior del bloque de historia en Docs */
+  .sbdocs-preview,
+  .docs-story {
+    background-color: #0F2748 !important;
+    border: 1px solid #243149 !important;
+    color: #F4F7FB !important;
+  }
+
+  /* El lienzo donde se ubica el componente debe mantener exactamente el fondo #0F2748 */
+  .docs-story > div,
+  .sbdocs-preview > div {
+    background-color: #0F2748 !important;
+  }
+
+  /* El contenedor directo que envuelve al componente (.sb-story) NUNCA debe tener borde ni fondo propio */
+  .sb-story,
+  .docs-story .sb-story,
+  .sbdocs-preview .sb-story {
+    background-color: transparent !important;
+    border: none !important;
+    box-shadow: none !important;
+    padding: 0 !important;
+  }
+
+  /* Barra de herramientas / zoom en Docs */
+  .sbdocs-preview-actions {
+    background-color: transparent !important;
+  }
+
+  /* Bloque de código fuente desplegable ("Show code") */
+  .docblock-source,
+  .docblock-source pre,
+  .docblock-source code {
+    background-color: #111A2B !important;
+    border-color: #243149 !important;
+    color: #F4F7FB !important;
+  }
+
+  .sbdocs h1,
+  .sbdocs h2,
+  .sbdocs h3,
+  .sbdocs h4,
+  .sbdocs-title,
+  .sbdocs-subtitle {
+    color: #F4F7FB !important;
+  }
+
+  .sbdocs p,
+  .sbdocs span,
+  .sbdocs li {
+    color: #CBD5E1 !important;
+  }
+
+  /* Tabla de argumentos / Controls en Docs */
+  table.docblock-argstable,
+  .docblock-argstable,
+  .docblock-argstable-head,
+  .docblock-argstable-body {
+    background-color: #111A2B !important;
+    border: 1px solid #243149 !important;
+    color: #F4F7FB !important;
+  }
+
+  table.docblock-argstable tr,
+  table.docblock-argstable tbody tr,
+  table.docblock-argstable thead tr {
+    background-color: #111A2B !important;
+    border-bottom: 1px solid #243149 !important;
+  }
+
+  table.docblock-argstable th {
+    color: #8D9AAF !important;
+    background-color: #111A2B !important;
+    border-bottom: 1px solid #243149 !important;
+  }
+
+  table.docblock-argstable td {
+    background-color: #111A2B !important;
+    border-bottom: 1px solid #243149 !important;
+    color: #F4F7FB !important;
+  }
+
+  table.docblock-argstable input,
+  table.docblock-argstable select,
+  table.docblock-argstable textarea {
+    background-color: #0F2748 !important;
+    color: #F4F7FB !important;
+    border: 1px solid #243149 !important;
+  }
+
+  table.docblock-argstable label {
+    color: #F4F7FB !important;
+  }
+
   html.light, html.light body, html.light #storybook-root {
     background-color: #FFFFFF !important;
     color: #111A2B !important;
