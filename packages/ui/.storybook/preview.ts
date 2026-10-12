@@ -10,14 +10,12 @@ const preview: Preview = {
       expanded: true,
       matchers: { color: /(background|color)$/i },
     },
-    // Fail a11y checks (e.g. colour contrast) instead of only reporting them.
     a11y: { test: "error" },
   },
   decorators: [
-    // Toggles the `.dark` class on <html>, the same mechanism the apps use.
     withThemeByClassName({
-      themes: { light: "", dark: "dark" },
-      defaultTheme: "light",
+      themes: { light: "light", dark: "dark" },
+      defaultTheme: "dark",
     }),
   ],
 };

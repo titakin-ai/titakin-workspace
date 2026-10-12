@@ -1,3 +1,5 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap");
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -6,66 +8,82 @@
   :root {
     /* Tema Claro */
     --background: 0 0% 100%;
-    --foreground: 222 47% 11%; /* Navy oscuro para texto */
+    --foreground: 219 43% 12%; /* #111A2B (Surface) */
 
-    --primary: 221 83% 53%; /* Azul Eléctrico */
-    --primary-foreground: 210 40% 98%;
+    /* Tokens Figma - Paleta Brand */
+    --primary: 217 100% 59%; /* #2F80FF (Brand 500) */
+    --primary-foreground: 0 0% 100%; /* #FFFFFF */
+
+    --brand-500: 217 100% 59%; /* #2F80FF */
+    --brand-400: 212 100% 68%; /* #5AA7FF (Hover) */
+    --brand-dark: 217 82% 43%; /* #1457C5 (Pressed) */
+    --brand-300: 212 100% 77%; /* #8BC2FF (Focus Ring) */
+
+    --surface: 0 0% 100%;
 
     --secondary: 210 40% 96%;
-    --secondary-foreground: 222 47% 11%;
+    --secondary-foreground: 219 43% 12%;
 
     --muted: 210 40% 96%;
     --muted-foreground: 215 16% 47%;
 
-    /* Semántica de Severidad / Estado */
-    --destructive: 0 84% 60%; /* Crítico (Rojo) */
-    --destructive-foreground: 210 40% 98%;
+    /* Semántica de Severidad / Estado Figma */
+    --destructive: 354 100% 68%; /* #FF5C6C (Error) */
+    --destructive-foreground: 0 0% 100%;
 
     --warning: 24 98% 50%; /* Alto (Naranja) */
-    --warning-foreground: 210 40% 98%;
-
-    --caution: 48 96% 53%; /* Medio (Amarillo) */
-    --caution-foreground: 26 83% 14%; /* Texto oscuro para contraste en amarillo */
-
-    --success: 142 71% 45%; /* Bajo/Completado (Verde) */
-    --success-foreground: 210 40% 98%;
-
-    --border: 214.3 31.8% 91.4%;
-    --input: 214.3 31.8% 91.4%;
-    --ring: 221 83% 53%;
-    --radius: 0.5rem;
-  }
-
-  .dark {
-    /* Tema Oscuro (Navy Base) */
-    --background: 222 47% 11%; /* Navy principal */
-    --foreground: 210 40% 98%;
-
-    --primary: 217 91% 60%; /* Azul Eléctrico */
-    --primary-foreground: 222 47% 11%;
-
-    --secondary: 217 32% 17%;
-    --secondary-foreground: 210 40% 98%;
-
-    --muted: 217 32% 17%;
-    --muted-foreground: 215 20.2% 65.1%;
-
-    /* Semántica de Severidad / Estado */
-    --destructive: 0 84% 60%; /* Crítico (Rojo vibrante) */
-    --destructive-foreground: 210 40% 98%;
-
-    --warning: 24 98% 50%; /* Alto (Naranja) */
-    --warning-foreground: 210 40% 98%;
+    --warning-foreground: 0 0% 100%;
 
     --caution: 48 96% 53%; /* Medio (Amarillo) */
     --caution-foreground: 26 83% 14%;
 
-    --success: 142 71% 45%; /* Bajo/Completado (Verde) */
-    --success-foreground: 210 40% 98%;
+    --success: 162 73% 46%; /* #20C997 (Success) */
+    --success-foreground: 0 0% 100%;
 
-    --border: 217 32% 17%;
-    --input: 217 32% 17%;
-    --ring: 217 91% 60%;
+    --border: 214.3 31.8% 91.4%;
+    --input: 214.3 31.8% 91.4%;
+    --ring: 212 100% 77%; /* #8BC2FF (Brand 300) */
+    --radius: 0.5rem;
+  }
+
+  .dark {
+    /* Tema Oscuro - Base Figma (#0F2748) */
+    --background: 215 66% 17%; /* #0F2748 (Fondo Azul Oscuro) */
+    --foreground: 210 40% 98%;
+
+    /* Tokens Figma - Paleta Brand */
+    --primary: 217 100% 59%; /* #2F80FF (Brand 500) */
+    --primary-foreground: 0 0% 100%; /* #FFFFFF */
+
+    --brand-500: 217 100% 59%; /* #2F80FF */
+    --brand-400: 212 100% 68%; /* #5AA7FF (Hover) */
+    --brand-dark: 217 82% 43%; /* #1457C5 (Pressed) */
+    --brand-300: 212 100% 77%; /* #8BC2FF (Focus Ring) */
+
+    --surface: 219 43% 12%; /* #111A2B */
+
+    --secondary: 219 34% 21%; /* #243149 (Border / Disabled background) */
+    --secondary-foreground: 210 40% 98%;
+
+    --muted: 219 34% 21%; /* #243149 */
+    --muted-foreground: 217 18% 62%; /* #8D9AAF (Disabled text) */
+
+    /* Semántica de Severidad / Estado Figma */
+    --destructive: 354 100% 68%; /* #FF5C6C (Error) */
+    --destructive-foreground: 0 0% 100%;
+
+    --warning: 24 98% 50%; /* Alto (Naranja) */
+    --warning-foreground: 0 0% 100%;
+
+    --caution: 48 96% 53%; /* Medio (Amarillo) */
+    --caution-foreground: 26 83% 14%;
+
+    --success: 162 73% 46%; /* #20C997 (Success) */
+    --success-foreground: 0 0% 100%;
+
+    --border: 219 34% 21%; /* #243149 (Border) */
+    --input: 219 34% 21%;
+    --ring: 212 100% 77%; /* #8BC2FF (Brand 300) */
   }
 
   * {
@@ -74,5 +92,12 @@
 
   html, body {
     @apply font-sans antialiased text-foreground bg-background;
+    font-family: "Inter", var(--font-sans, ui-sans-serif), system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  }
+
+  html.dark, body.dark, .dark, #storybook-root {
+    background-color: hsl(var(--background));
+    color: hsl(var(--foreground));
   }
 }
+
