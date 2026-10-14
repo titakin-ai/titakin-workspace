@@ -106,6 +106,7 @@ export interface LogoProps
     VariantProps<typeof logoVariants> {
   readonly variant?: "symbol" | "full";
   readonly color?: "brand" | "white" | "muted" | "current";
+  readonly uppercase?: boolean;
   readonly textClassName?: string;
   readonly label?: string;
 }
@@ -114,6 +115,7 @@ export interface LogoProps
  * Componente Logo del Design System de Titakin.
  * Permite renderizar tanto el símbolo aislado (`variant="symbol"`)
  * como la versión completa con el logotipo tipográfico (`variant="full"`).
+ * Soporta la propiedad `uppercase` para desplegar el nombre en mayúsculas.
  */
 export const Logo = React.forwardRef<HTMLDivElement, LogoProps>(
   (
@@ -121,6 +123,7 @@ export const Logo = React.forwardRef<HTMLDivElement, LogoProps>(
       variant = "symbol",
       size = "md",
       color = "brand",
+      uppercase = false,
       className,
       textClassName,
       label = "Titakín",
@@ -149,7 +152,8 @@ export const Logo = React.forwardRef<HTMLDivElement, LogoProps>(
         <TitakinSymbol size={size} color={color} />
         <span
           className={cn(
-            "font-sans font-semibold tracking-tight text-foreground select-none",
+            "font-sans font-semibold text-foreground select-none",
+            uppercase ? "uppercase tracking-wider font-bold" : "tracking-tight",
             size === "xs" && "text-xs",
             size === "sm" && "text-sm",
             size === "md" && "text-base",

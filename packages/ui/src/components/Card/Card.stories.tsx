@@ -75,7 +75,7 @@ export const Default: Story = {
 };
 
 export const AuthLoginCard: Story = {
-  name: "Especificación Figma: Login Card",
+  name: "Login Card (Modal / Versión Flotante)",
   render: (): ReactElement => (
     <Card className="w-[420px] max-w-full shadow-2xl">
       <CardHeader className="items-center text-center pb-2">

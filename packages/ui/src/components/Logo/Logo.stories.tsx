@@ -13,6 +13,7 @@ const meta = {
     size: "md",
     color: "brand",
     label: "Titakín",
+    uppercase: false,
   },
   argTypes: {
     variant: {
@@ -32,6 +33,11 @@ const meta = {
       options: ["brand", "white", "muted", "current"],
       description: "Color semántico aplicado al isotipo según los tokens del Design System.",
       table: { defaultValue: { summary: "brand" } },
+    },
+    uppercase: {
+      control: "boolean",
+      description: "Muestra el nombre de la app en mayúsculas (`TITAKÍN`) con espaciado tipográfico.",
+      table: { defaultValue: { summary: "false" } },
     },
     label: {
       control: "text",
@@ -60,6 +66,17 @@ export const FullLogo: Story = {
     variant: "full",
     size: "lg",
     color: "brand",
+    label: "Titakín",
+  },
+};
+
+export const FullLogoUppercase: Story = {
+  name: "Full Logo (Uppercase Wordmark)",
+  args: {
+    variant: "full",
+    size: "lg",
+    color: "brand",
+    uppercase: true,
     label: "Titakín",
   },
 };
