@@ -176,9 +176,7 @@ export const AuthHeaderPreview: Story = {
   name: "Contexto: Auth Header (Login)",
   render: (): ReactElement => (
     <div className="w-[380px] p-8 rounded-2xl border border-border bg-surface/70 shadow-2xl flex flex-col items-center text-center">
-      <div className="mb-4 p-3 rounded-2xl bg-brand-500/10 border border-brand-500/20">
-        <Logo variant="symbol" size="xl" color="brand" />
-      </div>
+      <Logo variant="symbol" size="xl" color="brand" className="mb-3" />
       <h2 className="text-xl font-bold tracking-tight text-foreground">
         Bienvenido a Titakín
       </h2>

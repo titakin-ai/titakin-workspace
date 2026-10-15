@@ -79,9 +79,7 @@ export const AuthLoginCard: Story = {
   render: (): ReactElement => (
     <Card className="w-[420px] max-w-full shadow-2xl">
       <CardHeader className="items-center text-center pb-2">
-        <div className="mb-2 p-2.5 rounded-2xl bg-brand-500/10 border border-brand-500/20">
-          <Logo variant="symbol" size="lg" color="brand" />
-        </div>
+        <Logo variant="symbol" size="lg" color="brand" className="mb-2" />
         <Heading size="h2">Bienvenido a Titakín</Heading>
         <Text variant="caption" color="muted" className="mt-1">
           Introduce tus credenciales para acceder a la plataforma.
@@ -106,12 +104,9 @@ export const AuthLoginCard: Story = {
             <Text variant="label" htmlFor="password">
               Contraseña
             </Text>
-            <a
-              href="#forgot-password"
-              className="text-xs font-medium text-brand-500 hover:text-brand-400 hover:underline transition-colors"
-            >
-              ¿Olvidaste tu contraseña?
-            </a>
+            <Button variant="link" size="sm" asChild className="p-0 h-auto text-xs font-medium">
+              <a href="#forgot-password">¿Olvidaste tu contraseña?</a>
+            </Button>
           </div>
           <PasswordInput id="password" placeholder="••••••••••••" />
         </div>
@@ -134,15 +129,12 @@ export const AuthLoginCard: Story = {
       </CardContent>
 
       <CardFooter className="flex flex-col items-center justify-center border-t border-border/50 pt-5 text-center text-xs text-muted-foreground">
-        <span>
-          ¿No tienes una cuenta aún?{" "}
-          <a
-            href="#register"
-            className="font-medium text-brand-500 hover:text-brand-400 hover:underline transition-colors"
-          >
-            Contacta a tu administrador MSSP
-          </a>
-        </span>
+        <Text as="p" variant="caption" color="muted" className="inline-flex items-center gap-1.5 flex-wrap justify-center text-xs text-muted-foreground">
+          <span>¿No tienes una cuenta aún?</span>
+          <Button variant="link" size="sm" asChild className="p-0 h-auto font-medium text-xs">
+            <a href="#register">Contacta a tu administrador MSSP</a>
+          </Button>
+        </Text>
       </CardFooter>
     </Card>
   ),

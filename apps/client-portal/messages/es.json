@@ -21,6 +21,10 @@
       "passwordPlaceholder": "Ingresa tu contraseña",
       "remember": "Recordarme",
       "forgotPassword": "¿Olvidaste tu contraseña?",
+      "welcome": "Bienvenido a Titakín",
+      "welcomeSubtitle": "Introduce tus credenciales para acceder a la plataforma.",
+      "noAccount": "¿No tienes una cuenta aún?",
+      "contactMssp": "Contacta a tu administrador MSSP",
       "submit": "Ingresar",
       "copyright": "© 2026 Titakín. Todos los derechos reservados."
     }

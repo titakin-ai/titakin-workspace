@@ -21,6 +21,10 @@
       "passwordPlaceholder": "Enter your password",
       "remember": "Remember me",
       "forgotPassword": "Forgot password?",
+      "welcome": "Welcome to Titakín",
+      "welcomeSubtitle": "Enter your credentials to access the platform.",
+      "noAccount": "Don't have an account yet?",
+      "contactMssp": "Contact your MSSP administrator",
       "submit": "Sign in",
       "copyright": "© 2026 Titakín. All rights reserved."
     }

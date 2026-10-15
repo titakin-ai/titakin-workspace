@@ -22,7 +22,7 @@ export const buttonVariants = cva(
         destructive:
           "bg-destructive text-destructive-foreground hover:bg-destructive/90 active:bg-destructive/80 focus-visible:ring-destructive/60 disabled:bg-border disabled:text-muted-foreground disabled:opacity-100 shadow-sm shadow-destructive/15",
         link:
-          "text-brand-500 hover:text-brand-600 dark:text-brand-300 dark:hover:text-brand-200 underline-offset-4 hover:underline p-0 h-auto font-medium disabled:text-muted-foreground",
+          "text-brand-400 hover:text-brand-300 active:text-brand-dark underline-offset-4 hover:underline active:underline p-0 h-auto font-medium transition-colors duration-150 disabled:text-muted-foreground",
       },
       size: {
         default: "h-10 px-4 py-2 text-sm rounded-lg gap-2",
