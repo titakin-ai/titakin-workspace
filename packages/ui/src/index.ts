@@ -4,6 +4,7 @@ export * from "./components/Card";
 export * from "./components/Checkbox";
 export * from "./components/Heading";
 export * from "./components/Input";
+export * from "./components/LanguageSelector";
 export * from "./components/Logo";
 export * from "./components/Text";
 export * from "./tokens";

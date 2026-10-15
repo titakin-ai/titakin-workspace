@@ -1,0 +1,28 @@
+{
+  "auth": {
+    "heroTitle1": "Seguridad inteligente.",
+    "heroTitle2": "Control total.",
+    "capabilities": {
+      "clients": "Gestión de clientes y servicios",
+      "monitoring": "Monitoreo y seguridad 24/7",
+      "ai": "Inteligencia artificial aplicada",
+      "reports": "Reportes y auditoría"
+    },
+    "tagline": {
+      "line1": "Tecnología que protege",
+      "line2": "lo que te importa."
+    },
+    "form": {
+      "title": "Portal de cliente",
+      "subtitle": "Inicia sesión para acceder a la información y servicios de tu organización.",
+      "emailLabel": "Correo electrónico",
+      "emailPlaceholder": "nombre@empresa.com",
+      "passwordLabel": "Contraseña",
+      "passwordPlaceholder": "Ingresa tu contraseña",
+      "remember": "Recordarme",
+      "forgotPassword": "¿Olvidaste tu contraseña?",
+      "submit": "Ingresar",
+      "copyright": "© 2026 Titakín. Todos los derechos reservados."
+    }
+  }
+}

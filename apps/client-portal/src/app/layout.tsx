@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import type { ReactElement, ReactNode } from "react";
+import { I18nProvider } from "@/providers/I18nProvider";
 import "@titakin/ui/styles/global.css";
 
 export const metadata: Metadata = {
@@ -11,10 +12,14 @@ interface RootLayoutProps {
   readonly children: ReactNode;
 }
 
-export default function RootLayout({ children }: RootLayoutProps): ReactElement {
+export default function RootLayout({
+  children,
+}: RootLayoutProps): ReactElement {
   return (
     <html lang="es" suppressHydrationWarning>
-      <body className="min-h-screen font-sans">{children}</body>
+      <body className="min-h-screen font-sans">
+        <I18nProvider>{children}</I18nProvider>
+      </body>
     </html>
   );
 }

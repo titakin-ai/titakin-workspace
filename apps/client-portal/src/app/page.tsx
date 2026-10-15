@@ -1,6 +1,6 @@
 import type { ReactElement } from "react";
-import { ClientPortalLogin } from "@/features/auth";
+import { Login } from "@/features/auth";
 
 export default function LoginPage(): ReactElement {
-  return <ClientPortalLogin />;
+  return <Login />;
 }

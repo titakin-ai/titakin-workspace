@@ -1,0 +1,28 @@
+{
+  "auth": {
+    "heroTitle1": "Intelligent security.",
+    "heroTitle2": "Total control.",
+    "capabilities": {
+      "clients": "Client and service management",
+      "monitoring": "24/7 security & monitoring",
+      "ai": "Applied artificial intelligence",
+      "reports": "Reports and audit logs"
+    },
+    "tagline": {
+      "line1": "Technology that protects",
+      "line2": "what matters most."
+    },
+    "form": {
+      "title": "Client Portal",
+      "subtitle": "Sign in to access your organization's information and security services.",
+      "emailLabel": "Email address",
+      "emailPlaceholder": "name@company.com",
+      "passwordLabel": "Password",
+      "passwordPlaceholder": "Enter your password",
+      "remember": "Remember me",
+      "forgotPassword": "Forgot password?",
+      "submit": "Sign in",
+      "copyright": "© 2026 Titakín. All rights reserved."
+    }
+  }
+}
